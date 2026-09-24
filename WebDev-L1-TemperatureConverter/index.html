@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter | OIBSIP Task 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="converter-card">
+      <div class="badge">OASIS INFOBYTE • TASK 3</div>
+      <h1>Temperature Converter</h1>
+      <p class="subtitle">Convert Celsius, Fahrenheit and Kelvin instantly.</p>
+
+      <form id="converterForm" novalidate>
+        <label for="temperature">Temperature Value</label>
+        <input
+          id="temperature"
+          type="number"
+          step="any"
+          placeholder="Enter temperature"
+          autocomplete="off"
+        >
+
+        <label for="unit">Input Unit</label>
+        <select id="unit">
+          <option value="C">Celsius (°C)</option>
+          <option value="F">Fahrenheit (°F)</option>
+          <option value="K">Kelvin (K)</option>
+        </select>
+
+        <button type="submit">Convert Temperature</button>
+      </form>
+
+      <div id="message" class="message" role="alert"></div>
+
+      <div id="results" class="results" aria-live="polite">
+        <div class="result-card">
+          <span>Celsius</span>
+          <strong id="celsiusResult">—</strong>
+        </div>
+        <div class="result-card">
+          <span>Fahrenheit</span>
+          <strong id="fahrenheitResult">—</strong>
+        </div>
+        <div class="result-card">
+          <span>Kelvin</span>
+          <strong id="kelvinResult">—</strong>
+        </div>
+      </div>
+
+      <p class="note">Absolute zero is −273.15°C / −459.67°F / 0 K.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
